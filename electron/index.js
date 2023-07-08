@@ -3,7 +3,7 @@ const path = require('path')
 
 const reactDevToolsPath = path.resolve(__dirname, '../vue-devtools');
 
-function createWindow () {
+function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
@@ -14,16 +14,19 @@ function createWindow () {
 
 
   let url = process.env.NODE_ENV === 'development' ?
-  'http://localhost:3000' :
-  'file://' + path.join(__dirname, '../dist/index.html');
-  win.loadURL( url )
+    'http://localhost:3000' :
+    'file://' + path.join(__dirname, '../dist/index.html');
+  win.loadURL(url)
+  if (process.env.NODE_ENV === 'development') {
+    win.webContents.openDevTools()
+  }
 }
 
-app.whenReady().then( async () => {
-  if (process.env.NODE_ENV === 'development'){
+app.whenReady().then(async () => {
+  if (process.env.NODE_ENV === 'development') {
     await session.defaultSession.loadExtension(reactDevToolsPath)
   }
-  
+
   createWindow()
 
   app.on('activate', () => {
