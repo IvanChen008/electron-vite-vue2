@@ -43,6 +43,7 @@
                 ]
             }
         ],
+        "icon": "build/icons/256x256.ico",
         "artifactName": "${productName}_${version}.${ext}"
     },
     "nsis": {
