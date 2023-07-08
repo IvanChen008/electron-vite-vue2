@@ -31,12 +31,15 @@
     "wait-on": "^6.0.1"
   },
   "dependencies": {
+    "pinia": "^2.1.4",
     "vite-plugin-vue2": "^1.9.3",
     "vue": "^2.6.14",
     "vue-router": "3.0.1",
-    "vue-template-compiler": "^2.6.14",
-    "vuex": "3.0.1"
+    "vue-template-compiler": "^2.6.14"
   },
-  "author": "Sunline<10775937@qq.com>",
+  "author": {
+    "name": "ivanchen",
+    "email": "838108717@qq.com"
+  },
   "license": "MIT"
 }
