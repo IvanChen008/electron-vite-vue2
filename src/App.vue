@@ -27,7 +27,9 @@
 import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  HelloWorld,
+  components: {
+    HelloWorld,
+  }
 }
 </script>
 
